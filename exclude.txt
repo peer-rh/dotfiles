@@ -1,0 +1,5 @@
+README.md
+exclude.txt
+.git
+sync.sh
+.config/Code
