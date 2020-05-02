@@ -6,14 +6,13 @@ filetype indent on
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
 set autoread
 au FocusGained,BufEnter * checktime
 
-" :W sudo saves the file
 command! SW execute 'w !sudo tee % > /dev/null' <bar> edit!
 
 " User Interface
@@ -38,7 +37,7 @@ set tm=500
 set number 
 
 syntax on
-colorscheme gruvbox
+colorscheme nord 
 " Other stuff
 
 set nobackup

@@ -12,7 +12,7 @@ window {
     background-color: @background;
     border:           6;
     padding:          2;
-    border-color: #e07116;
+    border-color: #81A1C1;
 }
 
 mainbox {
@@ -22,7 +22,7 @@ mainbox {
 
 message {
     border:       2px 0 0;
-    border-color: #e07116;
+    border-color: #81A1C1;
     padding:      1px;
 }
 
@@ -130,43 +130,43 @@ textbox-prompt-sep {
 }
 
 * {
-    gruvbox-dark-bg0:          #282828;
-    gruvbox-dark-bg0-soft:     #32302f;
-    gruvbox-dark-bg3:          #665c54;
-    gruvbox-dark-fg0:          #fbf1c7;
-    gruvbox-dark-fg1:          #ebdbb2;
-    gruvbox-dark-red-dark:     #cc241d;
-    gruvbox-dark-red-light:    #fb4934;
-    gruvbox-dark-yellow-dark:  #d79921;
-    gruvbox-dark-yellow-light: #fabd2f;
-    gruvbox-dark-gray:         #a89984;
+    nord-dark-bg0:          #2e3440;
+    nord-dark-bg0-soft:     #4C566A;
+    nord-dark-bg3:          #3B4252; 
+    nord-dark-fg0:          #d8dee9;
+    nord-dark-fg1:          #d8dee9;
+    nord-dark-blue-dark:     #5e81ac;
+    nord-dark-blue-light:    #81a1c1;
+    nord-dark-green-dark:  #a3be8c;
+    nord-dark-green-light: #8fbcbb;
+    nord-dark-gray:         #a89984;
 
     /* Theme colors */
-    background:                  @gruvbox-dark-bg0;
+    background:                  @nord-dark-bg0;
     background-color:            @background;
-    foreground:                  @gruvbox-dark-fg1;
-    border-color:                @gruvbox-dark-bg0;
+    foreground:                  @nord-dark-fg1;
+    border-color:                @nord-dark-bg0;
     separatorcolor:              @border-color;
     scrollbar-handle:            @border-color;
 
     normal-background:           @background;
     normal-foreground:           @foreground;
-    alternate-normal-background: @gruvbox-dark-bg0;
+    alternate-normal-background: @nord-dark-bg0;
     alternate-normal-foreground: @foreground;
-    selected-normal-background:  @gruvbox-dark-bg3;
-    selected-normal-foreground:  @gruvbox-dark-fg0;
+    selected-normal-background:  @nord-dark-bg3;
+    selected-normal-foreground:  @nord-dark-fg0;
 
-    active-background:           @gruvbox-dark-yellow-dark;
+    active-background:           @nord-dark-green-dark;
     active-foreground:           @background;
     alternate-active-background: @active-background;
     alternate-active-foreground: @active-foreground;
-    selected-active-background:  @gruvbox-dark-yellow-light;
+    selected-active-background:  @nord-dark-green-light;
     selected-active-foreground:  @active-foreground;
 
-    urgent-background:           @gruvbox-dark-red-dark;
+    urgent-background:           @nord-dark-blue-dark;
     urgent-foreground:           @background;
     alternate-urgent-background: @urgent-background;
     alternate-urgent-foreground: @urgent-foreground;
-    selected-urgent-background:  @gruvbox-dark-red-light;
+    selected-urgent-background:  @nord-dark-blue-light;
     selected-urgent-foreground:  @urgent-foreground;
 }

@@ -18,8 +18,11 @@ magenta = ${xrdb:color13}
 dark-cyan = ${xrdb:color6}
 cyan = ${xrdb:color14}
 light-grey = ${xrdb:color7}
-dark-orange = #bf6013 
-orange = #e07116
+grad-1 = #5E81AC
+grad-2 = #81A1C1
+grad-3 = #88C0D0
+grad-4 = #8FBCBB
+
 
 [global/wm]
 margin-bottom = 0
@@ -73,7 +76,7 @@ ws-icon-9 = 10;X
 format = <label-state> <label-mode>
 
 label-focused = " %icon% "
-label-focused-background = ${colors.orange}
+label-focused-background = ${colors.green}
 label-focused-foreground = ${colors.background}
 label-focused-padding = 0
 
@@ -84,11 +87,11 @@ label-unfocused-padding = 0
 
 label-visible = " %icon% "
 label-visible-background = ${colors.background}
-label-visible-foreground = ${colors.dark-orange}
+label-visible-foreground = ${colors.green}
 label-visible-padding = 0
 
 label-urgent = " %icon% "
-label-urgent-background = ${colors.yellow}
+label-urgent-background = ${colors.magenta}
 label-urgent-foreground = ${colors.background}
 label-urgent-padding = 0
 
@@ -104,7 +107,7 @@ time = " %H:%M"
 time-alt = " %H:%M:%S"
 
 format-foreground = ${colors.background}
-format-background = ${colors.dark-red}
+format-background = ${colors.grad-1}
 label = "%date% %time% "
 
 
@@ -117,19 +120,19 @@ adapter=AC
 
 format-full = "<label-full> "
 format-full-prefix = " "
-format-full-background = ${colors.dark-orange}
+format-full-background = ${colors.grad-2}
 format-full-foreground = ${colors.background}
 label-full = " %percentage%%"
 
 format-charging = "<label-charging> "
 format-charging-prefix = " "
-format-charging-background = ${colors.dark-orange}
+format-charging-background = ${colors.grad-2}
 format-charging-foreground = ${colors.background}
 label-charging = " %percentage%%"
 
 format-discharging = "<ramp-capacity> <label-discharging> "
 format-discharging-prefix = " "
-format-discharging-background = ${colors.dark-orange}
+format-discharging-background = ${colors.grad-2}
 format-discharging-foreground = ${colors.background}
 label-discharging = "%percentage%%"
 
@@ -146,7 +149,7 @@ interface = wlp1s0
 
 format-connected = "<ramp-signal> <label-connected> "
 format-connected-prefix = " "
-format-connected-background = ${colors.orange}
+format-connected-background = ${colors.grad-3}
 format-connected-foreground = ${colors.background}
 format-disconnected = 
 
@@ -166,7 +169,7 @@ type = internal/pulseaudio
 
 format-volume = "<label-volume> <bar-volume> "
 format-volume-prefix = " "
-format-volume-background = ${colors.dark-yellow}
+format-volume-background = ${colors.grad-4}
 format-volume-foreground = ${colors.background}
 label-volume = "墳"
 
@@ -174,10 +177,10 @@ bar-volume-width = 10
 bar-volume-indicator = |
 bar-volume-fill = -
 bar-volume-empty = -
-bar-volume-empty-foreground = ${colors.orange}
+bar-volume-empty-foreground = ${colors.grad-2}
 
 format-muted = "<label-muted> "
 format-muted-prefix = " "
-format-muted-background = ${colors.dark-yellow}
+format-muted-background = ${colors.grad-4}
 format-muted-foreground = ${colors.background}
 label-muted = "婢"

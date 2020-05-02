@@ -216,14 +216,12 @@ set_from_resource	$cyan	 	color14	#0000000
 set_from_resource	$darkwhite 	color7	#0000000
 set_from_resource	$white	 	color15	#0000000
 set $transparent #000000000
-set $orange      #e07116
-set $darkorange #bf6013	
 
 
-client.focused          $darkblack	$darkblack	$orange 	$orange 	$orange  	
-client.unfocused        $darkblack  	$darkblack 	$red	 	$darkorange	$darkorange		
-client.focused_inactive $darkblack	$darkblack 	$red		$darkorange	$darkorange
-client.urgent           $yellow  	$yellow  	$darkblack	$yellow 	$yellow
+client.focused          $darkblack	$darkblack	$blue    	$blue    	$blue  	
+client.unfocused        $darkblack  $darkblack 	$darkblue	$darkblue	$darkblue		
+client.focused_inactive $darkblack	$darkblack 	$darkblue	$darkblue	$darkblue
+client.urgent           $magenta  	$magenta  	$darkblack	$magenta 	$magenta
 
 for_window [class=".*"] border pixel 0
 for_window [class="URxvt"] border pixel 6
