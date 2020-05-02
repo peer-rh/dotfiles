@@ -38,7 +38,7 @@ set tm=500
 set number 
 
 syntax on
-
+colorscheme gruvbox
 " Other stuff
 
 set nobackup
