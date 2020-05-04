@@ -218,9 +218,9 @@ set_from_resource	$white	 	color15	#0000000
 set $transparent #000000000
 
 
-client.focused          $darkblack	$darkblack	$blue    	$blue    	$blue  	
-client.unfocused        $darkblack  $darkblack 	$darkblue	$darkblue	$darkblue		
-client.focused_inactive $darkblack	$darkblack 	$darkblue	$darkblue	$darkblue
+client.focused          $darkblack  $darkblack 	$darkblue	$darkblue	$darkblue		
+client.unfocused        $darkblack	$darkblack	$blue    	$blue    	$blue  	
+client.focused_client   $darkblack	$darkblack	$blue    	$blue    	$blue  	
 client.urgent           $magenta  	$magenta  	$darkblack	$magenta 	$magenta
 
 for_window [class=".*"] border pixel 0

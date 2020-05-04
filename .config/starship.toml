@@ -1,0 +1,6 @@
+add_newline = true
+
+# Change Shell Character
+[character]
+symbol = "▶"
+

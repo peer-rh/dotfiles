@@ -3,3 +3,4 @@ exclude.txt
 .git
 sync.sh
 .config/Code
+antigen.zsh
