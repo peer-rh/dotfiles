@@ -1,37 +1,27 @@
-source "${HOME}/.zgen/zgen.zsh"
-if ! zgen saved; then
+source ~/.zsh_plugins.sh
 
-    zgen oh-my-zsh
-    zgen oh-my-zsh plugins/git
-    zgen oh-my-zsh plugins/safe-paste
-    zgen oh-my-zsh plugins/colored-man-pages
-    zgen oh-my-zsh plugins/command-not-found
-    zgen oh-my-zsh plugins/fzf
-    zgen oh-my-zsh plugins/pip
-    zgen oh-my-zsh plugins/vscode
-    zgen oh-my-zsh plugins/sudo
-    zgen oh-my-zsh plugins/dotenv
-    zgen oh-my-zsh plugins/suse
-
-    zgen load zsh-users/zsh-syntax-highlighting
-    zgen load zsh-users/zsh-autosuggestions
-    zgen load zsh-users/zsh-completions
-
-    zgen save
-fi
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-autoload -Uz compinit
+autoload -Uz compinit 
 if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
 	compinit;
+    antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 else
 	compinit -C;
 fi;
 
+zstyle ':completion:*' menu select
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 export TERM=xterm-256color
 
 eval "$(starship init zsh)"
+eval "`pip completion --zsh`"
+compctl -K _pip_completion pip3
+export GROFF_NO_SGR=1
 
+alias ls="ls --color=auto"
+alias pip="pip3"
+alias python="python3"
 alias v="vim"
 alias grep='grep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 alias zshrc="vim ~/.dotfiles/.zshrc"
