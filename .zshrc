@@ -23,6 +23,8 @@ alias ls="ls --color=auto"
 alias pip="pip3"
 alias python="python3"
 alias v="vim"
+alias zsup="antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh"
+alias c="code"
 alias grep='grep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 alias zshrc="vim ~/.dotfiles/.zshrc"
 alias i3conf="vim ~/.dotfiles/.config/i3/config"

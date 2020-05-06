@@ -19,13 +19,13 @@
 *.background:   nord0
 *.cursorColor:  nord4
 !*fading: 35
-*fadeColor: nord0
+*fadeColor: nord3
 
-*.color0: nord0
+*.color0: nord1
 *.color1: nord11
 *.color2: nord14
 *.color3: nord13
-*.color4: #5E81AC
+*.color4: nord9
 *.color5: nord15
 *.color6: nord8
 *.color7: nord5
@@ -45,7 +45,6 @@ URxvt.italicFont: xft:InputMono:style=Italic:size=11
 URxvt.boldItalicFont: xft:InputMono:style=Bold Italic:size=11
 URxvt.letterSpace: -1
 URxvt.lineSpace: 0
-
 URxvt.borderColor: nord0
 URxvt.internalBorder:24
 URxvt.saveline: 2048
