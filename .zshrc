@@ -22,6 +22,7 @@ export GROFF_NO_SGR=1
 alias ls="ls --color=auto"
 alias pip="pip3"
 alias python="python3"
+alias cat="bat"
 alias v="vim"
 alias zsup="antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh"
 alias c="code"
