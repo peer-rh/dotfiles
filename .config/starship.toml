@@ -1,5 +1,5 @@
 add_newline = true
-
+prompt_order=["directory", "git_branch", "git_commit","git_state","git_status","cmd_duration", "line_break", "character"]
 # Change Shell Character
 [character]
 symbol = "▶"
