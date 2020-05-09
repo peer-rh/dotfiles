@@ -29,6 +29,8 @@ Plug 'preservim/nerdtree'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'preservim/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
+Plug 'psf/black', { 'branch': 'stable' }
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 " }}}
@@ -122,6 +124,7 @@ nnoremap <S-l> $
 nnoremap <leader>d :r! echo "" && date && echo ""<CR>
 nnoremap <leader>w :w!<CR>
 nnoremap <leader>q :q<CR>
+nnoremap <leader>wq :wq<CR>
 
 " convenience
 map :qw :wq
@@ -157,8 +160,15 @@ au BufNewFile,BufRead *.jade setlocal expandtab ts=2 sw=2
 " NERDTree
 let NERDTreeShowHidden=1
 
+" YCM
+set completeopt-=preview
+
 " Nord
 let g:nord_cursor_line_number_background = 1
+
+autocmd BufWritePre *.py execute ':Black'
+let g:user_emmet_leader_key=','
+
 " }}}
 
 " vim: set foldmethod=marker: 
