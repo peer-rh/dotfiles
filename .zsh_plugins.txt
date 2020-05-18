@@ -2,6 +2,7 @@ zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-completions
 
+robbyrussell/oh-my-zsh
 robbyrussell/oh-my-zsh path:plugins/git
 robbyrussell/oh-my-zsh path:plugins/safe-paste
 robbyrussell/oh-my-zsh path:plugins/command-not-found
@@ -10,4 +11,3 @@ robbyrussell/oh-my-zsh path:plugins/fzf
 robbyrussell/oh-my-zsh path:plugins/pip
 robbyrussell/oh-my-zsh path:plugins/sudo
 robbyrussell/oh-my-zsh path:plugins/dotenv
-robbyrussell/oh-my-zsh path:plugins/suse

@@ -13,4 +13,4 @@
 # Use 4 length spaced tabs.
 --tabs=4
 
---theme=Nord
+--theme="Solarized (dark)"

@@ -41,7 +41,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt-256color
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+q kill
@@ -56,14 +56,9 @@ bindsym $mod+d exec rofi -show drun
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+k focus up 
+bindsym $mod+l focus right 
+# alternatively, you can use the cursor keys: bindsym $mod+Left focus left bindsym $mod+Down focus down bindsym $mod+Up focus up bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -183,7 +178,7 @@ for_window [class="Kmix"] floating enable; border none
 for_window [class="Klipper"] floating enable; border none
 for_window [class="Plasmoidviewer"] floating enable; border none
 for_window [class="(?i)*nextcloud*"] floating disable
-for_window [class="plasmashell" window_type="notification"] floating enable, border none, move position 1600 50
+for_window [class="plasmashell" window_type="notification"] floating enable, border none, move position 1580 50
 no_focus [class="plasmashell" window_type="notification"]
 
 exec --no-startup-id picom
@@ -198,15 +193,17 @@ bindsym XF86AudioPrev       exec playerctl --player=spotify previous
 bindsym XF86AudioPlay       exec playerctl --player=spotify play-pause
 bindsym XF86AudioStop       exec playerctl --player=spotify stop
 
+exec_always xrdb ~/.Xresources
+
 set_from_resource	$darkblack 	color0	#0000000
 set_from_resource	$black	 	color8	#0000000
 set_from_resource	$darkred 	color1	#0000000
 set_from_resource	$red	 	color9	#0000000
-set_from_resource	$darkgreen 	color2	#0000000
-set_from_resource	$green	 	color10	#0000000
+set                 $darkgreen 	#848c54
+set_from_resource	$green	 	color2	#0000000
 set_from_resource	$darkyellow 	color3	#0000000
 set_from_resource	$yellow 	color11	#0000000
-set	$darkblue #5e81ac
+set_from_resource	$darkblue	color4	#0000000
 set_from_resource	$blue	 	color12	#0000000
 set_from_resource	$darkmagenta 	color5	#0000000
 set_from_resource	$magenta 	color13	#0000000
@@ -217,10 +214,10 @@ set_from_resource	$white	 	color15	#0000000
 set $transparent #000000000
 
 
-client.focused          $darkblack  $darkblack 	$blue   	$blue	    $blue		
-client.unfocused        $darkblack	$darkblack	$darkblue   $darkblue   $darkblue  	
-client.focused_inactive $darkblack	$darkblack	$darkblue   $darkblue  	$darkblue  	
-client.urgent           $magenta  	$magenta  	$darkblack	$magenta 	$magenta
+client.focused          $darkblack  $darkblack 	$green   	$green	    $green		
+client.unfocused        $darkblack	$darkblack	$darkgreen  $darkgreen  $darkgreen  	
+client.focused_inactive $darkblack	$darkblack	$darkgreen  $darkgreen 	$darkgreen  	
+client.urgent           $darkmagenta  	$darkmagenta  	$darkblack	$darkmagenta 	$darkmagenta
 
 for_window [class=".*"] border pixel 0
 for_window [class="URxvt"] border pixel 6
@@ -230,5 +227,4 @@ for_window [class="Rofi"] border pixel 6
 hide_edge_borders none
 
 exec_always /home/peer/.config/polybar/launch.sh
-
 exec_always --no-startup-id feh --bg-scale /home/peer/Pictures/wallpaper.jpg

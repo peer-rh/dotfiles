@@ -20,7 +20,7 @@ set t_Co=256
 " {{{
 call plug#begin('~/.vim/plugged')
 
-Plug 'arcticicestudio/nord-vim'
+Plug 'altercation/vim-colors-solarized'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'terryma/vim-multiple-cursors'
@@ -63,14 +63,16 @@ set tm=500
 set number 
 
 syntax on
-colorscheme nord 
-set cursorline
+colorscheme solarized 
+let g:solarized_termcolors=256
+hi CursorLineNr cterm=NONE
 
 " ligthline
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'solarized',
       \ }
+set noshowmode
 
 " }}}
 

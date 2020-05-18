@@ -1,9 +1,9 @@
+export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
 source ~/.zsh_plugins.sh
 
 autoload -Uz compinit 
 if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
 	compinit;
-    antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 else
 	compinit -C;
 fi;
@@ -23,11 +23,18 @@ alias ls="ls --color=auto"
 alias pip="pip3"
 alias python="python3"
 alias cat="bat"
+alias wally='~/.builds/wally'
+alias la="ls -la"
 alias v="vim"
-alias zsup="antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh"
+alias yin="yay -S"
+alias y="yay"
+alias zup="antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh"
 alias c="code"
 alias grep='grep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 alias zshrc="vim ~/.dotfiles/.zshrc"
 alias i3conf="vim ~/.dotfiles/.config/i3/config"
 alias polyconf="vim ~/.dotfiles/.config/polybar/config"
 alias vimrc="vim ~/.dotfiles/.vimrc"
+export PATH="$HOME/scripts:$PATH"
+export LD_PRELOAD=/usr/lib/libfreetype.so
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#10"

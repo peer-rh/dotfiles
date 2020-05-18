@@ -1,2 +1,2 @@
 rsync -r --links --exclude-from 'exclude.txt' . ~
-rsync -r ~/.config/Code/User/ ./.config/Code/User
+rsync -r ~/.config/Code\ -\ OSS/User/ ./.config/Code\ -\ OSS/User

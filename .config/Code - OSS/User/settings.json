@@ -112,12 +112,12 @@
     "indentRainbow.errorColor": "rgba(128,32,32,0)",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Nord",
     "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": true,
     "workbench.settings.openDefaultKeybindings": true,
     "workbench.settings.useSplitJSON": true,
     "window.menuBarVisibility": "hidden",
     "window.titleBarStyle": "native",
-    "vim.useCtrlKeys": false
+    "vim.useCtrlKeys": false,
+    "workbench.colorTheme": "Solarized Dark"
 }

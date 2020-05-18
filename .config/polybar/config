@@ -18,10 +18,10 @@ magenta = ${xrdb:color13}
 dark-cyan = ${xrdb:color6}
 cyan = ${xrdb:color14}
 light-grey = ${xrdb:color7}
-grad-1 = #5E81AC
-grad-2 = #81A1C1
-grad-3 = #88C0D0
-grad-4 = #8FBCBB
+grad-1 = ${colors.dark-blue}
+grad-2 = #2893be
+grad-3 = #299aab
+grad-4 = ${colors.dark-cyan}
 
 
 [global/wm]
@@ -76,7 +76,7 @@ ws-icon-9 = 10;X
 format = <label-state> <label-mode>
 
 label-focused = " %icon% "
-label-focused-background = ${colors.green}
+label-focused-background = ${colors.dark-green}
 label-focused-foreground = ${colors.background}
 label-focused-padding = 0
 
@@ -87,11 +87,11 @@ label-unfocused-padding = 0
 
 label-visible = " %icon% "
 label-visible-background = ${colors.background}
-label-visible-foreground = ${colors.green}
+label-visible-foreground = ${colors.dark-green}
 label-visible-padding = 0
 
 label-urgent = " %icon% "
-label-urgent-background = ${colors.magenta}
+label-urgent-background = ${colors.dark-magenta}
 label-urgent-foreground = ${colors.background}
 label-urgent-padding = 0
 
