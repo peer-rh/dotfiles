@@ -19,12 +19,13 @@ eval "`pip completion --zsh`"
 compctl -K _pip_completion pip3
 export GROFF_NO_SGR=1
 
-alias ls="ls --color=auto"
+alias ls="colorls --sd"
+alias la="colorls -a --sd"
+alias ll="colorls -la --sd"
 alias pip="pip3"
 alias python="python3"
 alias cat="bat"
 alias wally='~/.builds/wally'
-alias la="ls -la"
 alias v="vim"
 alias yin="yay -S"
 alias y="yay"

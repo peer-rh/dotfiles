@@ -14,23 +14,28 @@ set nobackup
 set nowritebackup
 
 set t_Co=256
+set encoding=UTF-8
+
 " }}}
 
 " Plugins
 " {{{
 call plug#begin('~/.vim/plugged')
 
-Plug 'altercation/vim-colors-solarized'
+Plug 'iCyMind/NeoSolarized'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-eunuch'
 Plug 'preservim/nerdtree'
-Plug 'ycm-core/YouCompleteMe'
 Plug 'preservim/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'psf/black', { 'branch': 'stable' }
 Plug 'mattn/emmet-vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'dense-analysis/ale'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 " }}}
@@ -63,8 +68,8 @@ set tm=500
 set number 
 
 syntax on
-colorscheme solarized 
-let g:solarized_termcolors=256
+set background=dark
+colorscheme NeoSolarized 
 hi CursorLineNr cterm=NONE
 
 " ligthline
@@ -127,6 +132,7 @@ nnoremap <leader>d :r! echo "" && date && echo ""<CR>
 nnoremap <leader>w :w!<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>wq :wq<CR>
+nnoremap <leader>gd :Gdiffsplit<CR>
 
 " convenience
 map :qw :wq
@@ -137,6 +143,19 @@ cmap w!! w !sudo tee > /dev/null %
 
 " NerdTree
 map <leader>f :NERDTreeToggle<CR>
+map <leader>l :ALEToggle<CR>
+
+nmap <silent> gd <Plug>(coc-definition)
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+nmap <leader>r <Plug>(coc-rename)
 
 " }}}
 
@@ -162,14 +181,25 @@ au BufNewFile,BufRead *.jade setlocal expandtab ts=2 sw=2
 " NERDTree
 let NERDTreeShowHidden=1
 
-" YCM
-set completeopt-=preview
-
 " Nord
 let g:nord_cursor_line_number_background = 1
 
+" Black
 autocmd BufWritePre *.py execute ':Black'
+
+" emmet
 let g:user_emmet_leader_key=','
+
+" Ale
+let g:ale_enabled = 0
+let g:ale_linters = {
+      \   'python': ['flake8', 'pylint'],
+      \   'ruby': ['standardrb', 'rubocop'],
+      \   'javascript': ['eslint'],
+      \}
+
+" Vim fugitive
+set diffopt+=vertical
 
 " }}}
 
