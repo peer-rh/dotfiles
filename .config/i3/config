@@ -224,6 +224,7 @@ for_window [class="URxvt"] border pixel 6
 for_window [class="Code"] border pixel 6
 for_window [class="Rofi"] border pixel 6
 for_window [class="Alacritty"] border pixel 6
+for_window [class="Emacs"] border pixel 6
 
 hide_edge_borders none
 

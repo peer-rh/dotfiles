@@ -36,6 +36,9 @@ alias zshrc="vim ~/.dotfiles/.zshrc"
 alias i3conf="vim ~/.dotfiles/.config/i3/config"
 alias polyconf="vim ~/.dotfiles/.config/polybar/config"
 alias vimrc="vim ~/.dotfiles/.vimrc"
+
 export PATH="$HOME/scripts:$PATH"
 export LD_PRELOAD=/usr/lib/libfreetype.so
+export EDITOR=/usr/bin/vim
+export BROWSER=/usr/bin/google-chrome-stable
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#10"

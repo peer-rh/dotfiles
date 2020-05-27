@@ -36,8 +36,13 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
+Plug 'vim-python/python-syntax'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim' 
+Plug 'francoiscabrol/ranger.vim'
 
 call plug#end()
+
 " }}}
 
 
@@ -131,6 +136,7 @@ nnoremap <S-l> $
 nnoremap <leader>d :r! echo "" && date && echo ""<CR>
 nnoremap <leader>w :w!<CR>
 nnoremap <leader>q :q<CR>
+nnoremap <leader>qa :qa<CR>
 nnoremap <leader>wq :wq<CR>
 nnoremap <leader>gd :Gdiffsplit<CR>
 
@@ -155,8 +161,7 @@ function! s:show_documentation()
   endif
 endfunction
 
-nmap <leader>r <Plug>(coc-rename)
-
+map <leader>r :Ranger<CR>
 " }}}
 
 " Language specific
@@ -165,7 +170,7 @@ filetype plugin indent on
 
 "python 
 au BufNewFile,BufRead *.py
-    \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
+    \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent fileformat=unix
 au BufNewFile,BufRead *.vim setlocal noet ts=4 sw=4 sts=4
 au BufNewFile,BufRead *.txt setlocal noet ts=4 sw=4
 au BufNewFile,BufRead *.md setlocal spell noet ts=4 sw=4
@@ -186,7 +191,7 @@ let g:nord_cursor_line_number_background = 1
 
 " Black
 autocmd BufWritePre *.py execute ':Black'
-
+let g:black_linelength=79
 " emmet
 let g:user_emmet_leader_key=','
 
@@ -200,6 +205,9 @@ let g:ale_linters = {
 
 " Vim fugitive
 set diffopt+=vertical
+
+" Vim Python Syntax
+let g:python_highlight_all = 1
 
 " }}}
 
