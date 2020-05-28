@@ -4,3 +4,4 @@ exclude.txt
 sync.sh
 .config/Code
 antigen.zsh
+.vim/UltiSnips

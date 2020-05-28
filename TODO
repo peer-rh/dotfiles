@@ -1,7 +1,4 @@
 - ledger
 - Dunst
-- vim better multi cursor
-- add vim docstring syntax
-- add vim navigate to next _
-- add vim to allways have cursor away from eof 
-- normal mode tab
+- add vim to always have cursor away from eof 
+- setup either xmonad or dwm

@@ -40,6 +40,9 @@ Plug 'vim-python/python-syntax'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' 
 Plug 'francoiscabrol/ranger.vim'
+Plug 'ap/vim-css-color'
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
+Plug 'SirVer/ultisnips'
 
 call plug#end()
 
@@ -129,6 +132,9 @@ nnoremap <leader><Enter> za
 " move per visual line
 nnoremap j gj
 nnoremap k gk
+
+nmap w t_ 
+
 " Remap to beginning/end of line
 nnoremap <S-h> ^
 nnoremap <S-l> $
@@ -150,6 +156,8 @@ cmap w!! w !sudo tee > /dev/null %
 " NerdTree
 map <leader>f :NERDTreeToggle<CR>
 map <leader>l :ALEToggle<CR>
+map <leader>ds :Pydocstring<CR>
+nmap <silent> <C-_> <Plug>(pydocstring)
 
 nmap <silent> gd <Plug>(coc-definition)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -164,7 +172,7 @@ endfunction
 let g:ranger_map_keys = 0
 map <leader>r :Ranger<CR>
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-
+nmap ? *
 " }}}
 
 " Language specific
