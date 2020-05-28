@@ -161,7 +161,10 @@ function! s:show_documentation()
   endif
 endfunction
 
+let g:ranger_map_keys = 0
 map <leader>r :Ranger<CR>
+autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+
 " }}}
 
 " Language specific
