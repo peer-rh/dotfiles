@@ -1,9 +1,9 @@
 " General
 " {{{
-set history=500
 
 filetype plugin on
 filetype indent on
+set history=500
 
 set autoread
 au FocusGained,BufEnter * checktime
@@ -22,11 +22,11 @@ set encoding=UTF-8
 " {{{
 call plug#begin('~/.vim/plugged')
 
+Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'iCyMind/NeoSolarized'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'tpope/vim-eunuch'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
@@ -40,9 +40,15 @@ Plug 'vim-python/python-syntax'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' 
 Plug 'francoiscabrol/ranger.vim'
-Plug 'ap/vim-css-color'
+Plug 'chrisbra/Colorizer'
 Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
 Plug 'SirVer/ultisnips'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 call plug#end()
 
@@ -133,11 +139,12 @@ nnoremap <leader><Enter> za
 nnoremap j gj
 nnoremap k gk
 
-nmap w t_ 
+nnoremap <C-e> t_ 
 
 " Remap to beginning/end of line
 nnoremap <S-h> ^
 nnoremap <S-l> $
+
 " Add a date timestamp between two new lines.
 nnoremap <leader>d :r! echo "" && date && echo ""<CR>
 nnoremap <leader>w :w!<CR>
@@ -172,7 +179,6 @@ endfunction
 let g:ranger_map_keys = 0
 map <leader>r :Ranger<CR>
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-nmap ? *
 " }}}
 
 " Language specific
@@ -190,6 +196,8 @@ au BufNewFile,BufRead *.cpp setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.hpp setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.json setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.jade setlocal expandtab ts=2 sw=2
+
+au BufWritePost *.scss :silent !sassvim <afile>
 " }}}
 
 " Plugin specific
@@ -219,6 +227,9 @@ set diffopt+=vertical
 
 " Vim Python Syntax
 let g:python_highlight_all = 1
+
+let g:instant_markdown_autostart = 0
+
 
 " }}}
 

@@ -15,8 +15,6 @@ zstyle ':completion:*' menu select
 export TERM=xterm-256color
 
 eval "$(starship init zsh)"
-eval "`pip completion --zsh`"
-compctl -K _pip_completion pip3
 export GROFF_NO_SGR=1
 
 alias ls="colorls --sd"
@@ -41,4 +39,7 @@ export PATH="$HOME/scripts:$PATH"
 export LD_PRELOAD=/usr/lib/libfreetype.so
 export EDITOR=/usr/bin/vim
 export BROWSER=/usr/bin/google-chrome-stable
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#10"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=23"
+
+export NVM_DIR="$HOME/.nvm"
+alias loadnvm="[ -s '$NVM_DIR/nvm.sh' ] && \. '$NVM_DIR/nvm.sh'; [ -s '$NVM_DIR/bash_completion' ] && \. '$NVM_DIR/bash_completion'"
