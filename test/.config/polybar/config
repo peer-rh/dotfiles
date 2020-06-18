@@ -1,0 +1,186 @@
+[colors]
+background = ${xrdb:color0}
+background-alt = ${xrdb:color8}
+foreground = ${xrdb:color15}
+foreground-alt = ${xrdb:color15}
+black = ${xrdb:color0}
+dark-grey = ${xrdb:color8}
+dark-red = ${xrdb:color1}
+red = ${xrdb:color9}
+dark-green = ${xrdb:color2}
+green = ${xrdb:color10}
+dark-yellow = ${xrdb:color3}
+yellow = ${xrdb:color11}
+dark-blue = ${xrdb:color4}
+blue = ${xrdb:color12}
+dark-magenta = ${xrdb:color5}
+magenta = ${xrdb:color13}
+dark-cyan = ${xrdb:color6}
+cyan = ${xrdb:color14}
+light-grey = ${xrdb:color7}
+grad-1 = ${colors.dark-blue}
+grad-2 = #2893be
+grad-3 = #299aab
+grad-4 = ${colors.dark-cyan}
+
+
+[global/wm]
+margin-bottom = 0
+margin-top = 0
+
+[bar/main]
+monitor = ${env:MONITOR:}
+bottom = false
+
+width=100%
+height=35px
+
+offset-x = 0
+offset-y = 0
+
+background = #00000000
+foreground = ${colors.foreground}
+
+border-size = 6px
+border-color = #00000000
+
+module-margin = 0
+
+font-0 = Iosevka NF:style=Regular:size=14;3
+
+; i3
+modules-left = i3
+; none
+modules-center = 
+; wifi, battery, volume,  time
+modules-right = audio wifi battery date
+
+
+[module/i3]
+type = internal/i3
+pin-workspaces = true
+index-sort = true
+wrapping-scroll = false
+
+ws-icon-0 = 1;I
+ws-icon-1 = 2;II
+ws-icon-2 = 3;III
+ws-icon-3 = 4;IV
+ws-icon-4 = 5;V
+ws-icon-5 = 6;VI
+ws-icon-6 = 7;VII
+ws-icon-7 = 8;VIII
+ws-icon-8 = 9;IX
+ws-icon-9 = 10;X
+
+format = <label-state> <label-mode>
+
+label-focused = " %icon% "
+label-focused-background = ${colors.dark-green}
+label-focused-foreground = ${colors.background}
+label-focused-padding = 0
+
+label-unfocused = " %icon% "
+label-unfocused-background = ${colors.background}
+label-unfocused-foreground = ${colors.foreground}
+label-unfocused-padding = 0
+
+label-visible = " %icon% "
+label-visible-background = ${colors.background}
+label-visible-foreground = ${colors.dark-green}
+label-visible-padding = 0
+
+label-urgent = " %icon% "
+label-urgent-background = ${colors.dark-magenta}
+label-urgent-foreground = ${colors.background}
+label-urgent-padding = 0
+
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = "  %d-%m-%Y"
+
+time = " %H:%M"
+time-alt = " %H:%M:%S"
+
+format-foreground = ${colors.background}
+format-background = ${colors.grad-1}
+label = "%date% %time% "
+
+
+[module/battery]
+type = internal/battery
+full-at = 96
+
+battery=BAT0
+adapter=AC
+
+format-full = "<label-full> "
+format-full-prefix = " "
+format-full-background = ${colors.grad-2}
+format-full-foreground = ${colors.background}
+label-full = " %percentage%%"
+
+format-charging = "<label-charging> "
+format-charging-prefix = " "
+format-charging-background = ${colors.grad-2}
+format-charging-foreground = ${colors.background}
+label-charging = " %percentage%%"
+
+format-discharging = "<ramp-capacity> <label-discharging> "
+format-discharging-prefix = " "
+format-discharging-background = ${colors.grad-2}
+format-discharging-foreground = ${colors.background}
+label-discharging = "%percentage%%"
+
+ramp-capacity-0 = 
+ramp-capacity-1 =  
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+
+[module/wifi]
+type = internal/network
+interface = wlp1s0
+
+format-connected = "<ramp-signal> <label-connected> "
+format-connected-prefix = " "
+format-connected-background = ${colors.grad-3}
+format-connected-foreground = ${colors.background}
+format-disconnected = 
+
+label-connected = %essid%
+label-connected-foreground = ${colors.background}
+
+
+ramp-signal-0 = 睊
+ramp-signal-1 = 直
+ramp-signal-2 = 直
+ramp-signal-3 = 直
+ramp-signal-4 = 直
+ramp-signal-foreground = ${colors.background}
+
+[module/audio]
+type = internal/pulseaudio
+
+format-volume = "<label-volume> <bar-volume> "
+format-volume-prefix = " "
+format-volume-background = ${colors.grad-4}
+format-volume-foreground = ${colors.background}
+label-volume = "墳"
+
+bar-volume-width = 10
+bar-volume-indicator = |
+bar-volume-fill = -
+bar-volume-empty = -
+bar-volume-empty-foreground = ${colors.grad-2}
+
+format-muted = "<label-muted> "
+format-muted-prefix = " "
+format-muted-background = ${colors.grad-4}
+format-muted-foreground = ${colors.background}
+label-muted = "婢"

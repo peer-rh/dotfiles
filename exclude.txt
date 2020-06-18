@@ -1,7 +1,0 @@
-README.md
-exclude.txt
-.git
-sync.sh
-.config/Code
-antigen.zsh
-.vim/UltiSnips

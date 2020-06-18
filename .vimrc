@@ -152,6 +152,7 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>qa :qa<CR>
 nnoremap <leader>wq :wq<CR>
 nnoremap <leader>gd :Gdiffsplit<CR>
+nnoremap <leader>a :Ag<CR>
 
 " convenience
 map :qw :wq
@@ -229,7 +230,6 @@ set diffopt+=vertical
 let g:python_highlight_all = 1
 
 let g:instant_markdown_autostart = 0
-
 
 " }}}
 

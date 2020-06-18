@@ -1,0 +1,16 @@
+.config/alacritty/
+.config/bat/
+.config/i3/
+.config/polybar/
+.config/ranger/
+.config/rofi/
+.config/starship.toml/
+.doom.d/
+Pictures/wallpaper.jpg
+scripts/
+.vim/UltiSnips/
+.vim/after/
+.vimrc
+.Xresources
+.zsh_plugins.txt
+.zshrc
