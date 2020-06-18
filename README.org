@@ -6,15 +6,15 @@ This dotfiles repository uses rsync to sync the different configuration files fr
 
 *Important:* Make sure that the directories end with a "/" otherwise the sync script won't work
 ** Programs
-*** alacritty
-*** bat
-*** doom emacs
-*** i3wm
-*** polybar
-*** ranger
-*** rofi
-*** vim
-*** zsh
+- alacritty
+- bat
+- doom emacs
+- i3wm
+- polybar
+- ranger
+- rofi
+- vim
+- zsh
 
 * TODOS
 ** TODO Finish Doom Emacs config
