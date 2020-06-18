@@ -4,7 +4,7 @@
 .config/polybar/
 .config/ranger/
 .config/rofi/
-.config/starship.toml/
+.config/starship.toml
 .doom.d/
 Pictures/wallpaper.jpg
 scripts/

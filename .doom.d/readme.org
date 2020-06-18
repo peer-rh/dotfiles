@@ -17,6 +17,6 @@
 * TODOS:
 ** TODO Org Mode
 ** TODO Snippets
-** TODO Put into dotfiles
 ** TODO Wordpress development
+** TODO Workspace tab bar
 ** TODO Python development

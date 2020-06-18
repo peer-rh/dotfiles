@@ -230,6 +230,7 @@ set diffopt+=vertical
 let g:python_highlight_all = 1
 
 let g:instant_markdown_autostart = 0
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
 
 " }}}
 

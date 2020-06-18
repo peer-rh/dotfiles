@@ -34,6 +34,7 @@ alias zshrc="vim ~/.zshrc"
 alias i3conf="vim ~/.config/i3/config"
 alias polyconf="vim ~/.config/polybar/config"
 alias vimrc="vim ~/.vimrc"
+alias dotsync="~/.dotfiles/sync.sh"
 alias gd="git difftool"
 export PATH="$HOME/scripts:$PATH"
 export LD_PRELOAD=/usr/lib/libfreetype.so
