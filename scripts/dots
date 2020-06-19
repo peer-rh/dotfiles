@@ -1,0 +1,88 @@
+#!/bin/bash
+
+dots_help() {
+    echo "Usage: Dots"
+    echo "    sync      Sync the dotfiles to .dotfiles"
+    echo "    install   Install the dotfiles to the machine"
+    echo "    gitadd    git add all files"
+    echo "    gitcommit git commit with message"
+    echo "    gitpush   git push .dotfiles to the cloud"
+    echo "    all       sync & gitadd & gitcommit & gitpush"
+    echo "    add       add file/directory which should be synced"
+}
+
+dots_install() {
+    while read -r line
+    do
+        [[ "$line" == */ ]] && mkdir -p $HOME/$line
+        [[ -f "$HOME/$line" ]] && cp -r "$HOME/$line" ~/.dotfiles-backup
+        rsync -av "$HOME/.dotfiles/$line" "$HOME/$line"
+    done < ~/.dotfiles/sync_files.txt
+}
+
+dots_sync() {
+    while read -r line
+    do
+        [[ "$line" == */ ]] && mkdir -p $HOME/.dotfiles/$line
+        rsync -a "$HOME/$line" "$HOME/.dotfiles/$line"
+    done < ~/.dotfiles/sync_files.txt
+}
+
+dots_gitadd() {
+   git -C ~/.dotfiles add -A 
+}
+
+dots_gitcommit() {
+    if [ -z $1 ]; then
+        echo "Error: You must pass a commit message"
+    else
+        git -C ~/.dotfiles commit -m $1
+    fi
+}
+
+dots_gitpush() {
+    git -C ~/.dotfiles push 
+}
+
+dots_add() {
+    filelocation="$PWD/$1"
+    homewithslash="$HOME/"
+    if [ -d $filelocation ]; then
+        if [[ "$1" == */ ]]; then
+            echo "${filelocation/$homewithslash}" >> ~/.dotfiles/sync_files.txt
+        else
+            echo "${filelocation/$homewithslash}/" >> ~/.dotfiles/sync_files.txt
+        fi
+    elif [ -f $filelocation ]; then
+        echo "${filelocation/$homewithslash}" >> ~/.dotfiles/sync_files.txt
+    else
+        echo "File $filelocation does not exist"
+    fi
+}
+
+dots_all() {
+    if [ -z $1 ]; then
+        echo "Error: You must pass a commit message"
+    else
+        dots_sync
+        dots_gitadd
+        git -C ~/.dotfiles commit -m $1
+        dots_gitpush
+    fi
+}
+
+cmdname=$1
+case $cmdname in
+    "" | "-h" | "--help")
+        dots_help
+        ;;
+    *)
+        shift
+        dots_${cmdname} $@
+        if [ $? = 127 ]; then
+            echo "Error: '$cmdname' is not a known subcommand." >&2
+            echo "       Run 'dots --help' for a list of known subcommands." >&2
+            exit 1
+        fi
+        ;;
+esac

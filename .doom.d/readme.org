@@ -19,5 +19,5 @@
 ** TODO Org Mode
 ** TODO Snippets
 ** TODO Wordpress development
-** TODO Workspace tab bar
 ** TODO Python development
+** TODO Add :nohlsearch shortcut

@@ -37,7 +37,7 @@ alias vimrc="vim ~/.vimrc"
 
 alias dotsync="~/.dotfiles/sync.sh"
 alias dotadd="git -C ~/.dotfiles add -A"
-alias dotcommit="git -C ~/.dotfiles commit -m $1"
+alias dotcommit="git -C ~/.dotfiles commit -m"
 alias dotpush="git -C ~/.dotfiles push"
 alias dotall="dotsync; dotadd; dotcommit $1; dotpush"
 
