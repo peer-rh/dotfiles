@@ -5,6 +5,10 @@
  :n   "C-<down>" ":m . +1"
  :n   "C-<up>" ":m . -2"
 
+ ;; expand region
+ :n   "C-@" #'er/expand-region
+ :i   "C-@" #'er/expand-region
+
  ;; Insert mode movement
  :i   "C-b" #'backward-word
  :i   "C-e" #'forward-word
@@ -16,7 +20,14 @@
 
  )
 (map! :leader
-      )
+      (:prefix-map ("C" . "config files")
+       :desc "Doom" "d" #'doom/open-private-config
+       :desc "Dotfile Readme" "r" (lambda() (interactive)(find-file "~/.dotfiles/README.org"))
+       :desc "Zsh" "z" (lambda() (interactive)(find-file "~/.zshrc"))
+       :desc "i3wm" "i" (lambda() (interactive)(find-file "~/.config/i3/config"))
+       :desc "Vim" "v" (lambda() (interactive)(find-file "~/.vimrc"))
+       :desc "Alacritty" "a" (lambda() (interactive)(find-file "~/.config/alacritty/alacritty.yml"))
+       :desc "Polybar" "p" (lambda() (interactive)(find-file "~/.config/polybar/config"))))
 
 ;; Move focus
 (global-set-key (kbd "C-j") #'evil-window-down)

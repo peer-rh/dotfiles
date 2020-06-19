@@ -51,4 +51,4 @@
 
 (package! dimmer)
 (package! projectile)
-(package! yasnippet)
+(package! magit)

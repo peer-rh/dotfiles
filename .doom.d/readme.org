@@ -3,16 +3,17 @@
 
 * Docs
 ** Keybindings
-*** *C-[h,j,k,l]* move focus
-*** *C-S-[h,j,k,l]* move focused window
-*** "C-<down/up>" Move line
+- *C-[h,j,k,l]* Move focus
+- *C-S-[h,j,k,l]* Move focused window
+- *C-<down/up>* Move line
+- *C-@* Expand region
 ** Insert keybindings
-*** *C-b* Move one word backward
-*** *C-e* Move one word forward
-*** *C-p* Yank from internal clipboard
-*** *C-S-v* Paste from system clipboard
+- *C-b* Move one word backward
+- *C-e* Move one word forward
+- *C-p* Yank from internal clipboard
+- *C-S-v* Paste from system clipboard
 ** Visual Keybindings
-*** *C-S-c* Copy to system clipboard
+- *C-S-c* Copy to system clipboard
 
 * TODOS:
 ** TODO Org Mode

@@ -1,6 +1,6 @@
 #+TITLE: My dotfiles
 
-* DESC
+* Docs
 ** Basics
 This dotfiles repository uses rsync to sync the different configuration files from their locations into this directory. The reason why I chose to sync them into and not from the directory is because some programs like UltiSnips and Doom Emacs have their own ways to edit the config and it is hard to overwrite the location of those files. All the files and directories to be synced are in *sync_files.txt*.
 
