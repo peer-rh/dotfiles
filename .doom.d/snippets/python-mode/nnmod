@@ -1,0 +1,14 @@
+#-*- mode: snippet -*-
+# name: nn Module
+# key: nnmod
+# --
+
+class $1(nn.Module):
+    def __init__(self$2):
+        super($1, self).__init__()
+        $3
+
+    def forward(self, x):
+        $4
+
+$0

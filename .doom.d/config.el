@@ -53,9 +53,15 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+; scrolling
 (setq scroll-margin 7)
 (setq scroll-step 1)
+(setq mouse-wheel-progressive-speed nil)
+
+(global-visual-line-mode t)
+
 (setq doom-font (font-spec :family "Hack" :size 14))
-(load! "+functions")
+
+(load! "+languages")
 (load! "+keybindings")
 (load! "+package-settings")

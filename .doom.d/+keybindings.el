@@ -5,6 +5,10 @@
  :n   "C-<down>" ":m . +1"
  :n   "C-<up>" ":m . -2"
 
+ ;; move visual line
+ :n   "j" #'evil-next-visual-line
+ :n   "k" #'evil-previous-visual-line
+
  ;; expand region
  :n   "C-@" #'er/expand-region
  :i   "C-@" #'er/expand-region
@@ -20,14 +24,19 @@
 
  )
 (map! :leader
+      :desc "kill-ring"          "y" #'helm-show-kill-ring
+      :desc "Clear highlights"   "ESC" #'evil-ex-nohighlight
+      (:prefix "c"
+       :desc "Toggle comment"    "t" #'evilnc-comment-or-uncomment-lines)
       (:prefix-map ("C" . "config files")
-       :desc "Doom" "d" #'doom/open-private-config
-       :desc "Dotfile Readme" "r" (lambda() (interactive)(find-file "~/.dotfiles/README.org"))
-       :desc "Zsh" "z" (lambda() (interactive)(find-file "~/.zshrc"))
-       :desc "i3wm" "i" (lambda() (interactive)(find-file "~/.config/i3/config"))
-       :desc "Vim" "v" (lambda() (interactive)(find-file "~/.vimrc"))
-       :desc "Alacritty" "a" (lambda() (interactive)(find-file "~/.config/alacritty/alacritty.yml"))
-       :desc "Polybar" "p" (lambda() (interactive)(find-file "~/.config/polybar/config"))))
+       :desc "Doom"              "d" #'doom/open-private-config
+       :desc "Dotfile Readme"    "r" (lambda() (interactive)(find-file "~/.dotfiles/README.org"))
+       :desc "Zsh"               "z" (lambda() (interactive)(find-file "~/.zshrc"))
+       :desc "i3wm"              "i" (lambda() (interactive)(find-file "~/.config/i3/config"))
+       :desc "Vim"               "v" (lambda() (interactive)(find-file "~/.vimrc"))
+       :desc "Alacritty"         "a" (lambda() (interactive)(find-file "~/.config/alacritty/alacritty.yml"))
+       :desc "Polybar"           "p" (lambda() (interactive)(find-file "~/.config/polybar/config"))))
+
 
 ;; Move focus
 (global-set-key (kbd "C-j") #'evil-window-down)

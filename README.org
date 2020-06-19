@@ -15,7 +15,7 @@ This dotfiles repository uses rsync to sync the different configuration files fr
 - rofi
 - vim
 - zsh
-** Command line Util
+** Command line Utility
 - =dots install= Installs the dotfiles to the local system
 - =dots sync= Sync the dotfiles to the dir
 - =dots gitadd= Git add all modified or new files
@@ -25,6 +25,5 @@ This dotfiles repository uses rsync to sync the different configuration files fr
 - =dots add= Add a dir or file which should be synced
 
 * TODOS
-- TODO Finish Doom Emacs config
 - TODO Switch over to xmonad
 - TODO Better Documentation / wiki

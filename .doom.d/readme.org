@@ -12,12 +12,11 @@
 - *C-e* Move one word forward
 - *C-p* Yank from internal clipboard
 - *C-S-v* Paste from system clipboard
+- *jj* Escape insert mode
 ** Visual Keybindings
 - *C-S-c* Copy to system clipboard
-
-* TODOS:
-** TODO Org Mode
-** TODO Snippets
-** TODO Wordpress development
-** TODO Python development
-** TODO Add :nohlsearch shortcut
+** Leader keybindings
+- *<Leader> y* Show kill ring history
+- *<Leader> C* A list of the some config files
+- *<Leader> c t* Comment/Uncomment on selected block of code
+- *<Leader> <esc>* Clear search highlights

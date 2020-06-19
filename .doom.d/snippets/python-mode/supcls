@@ -1,0 +1,10 @@
+#-*- mode: snippet -*-
+# name: Super Class
+# key: supcls
+# --
+
+class $1($2):
+    def __init__(self$3):
+        super($1, self).__init__()
+        $4
+    $0

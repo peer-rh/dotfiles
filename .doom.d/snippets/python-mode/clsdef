@@ -1,0 +1,9 @@
+#-*- mode: snippet -*-
+# name: class def
+# key: clsdef
+# --
+
+def $1(self$2):
+    $3
+
+$0

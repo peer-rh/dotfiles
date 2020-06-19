@@ -1,0 +1,12 @@
+#-*- mode: snippet -*-
+# name: try/except
+# key: try
+# --
+
+try:
+    $1
+
+except Exception as e:
+    $2
+
+$0
