@@ -41,7 +41,6 @@ alias dotcommit="git -C ~/.dotfiles commit -m $1"
 alias dotpush="git -C ~/.dotfiles push"
 alias dotall="dotsync; dotadd; dotcommit $1; dotpush"
 
-# test
 alias gd="git difftool"
 export PATH="$HOME/scripts:$PATH"
 export LD_PRELOAD=/usr/lib/libfreetype.so
