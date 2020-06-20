@@ -35,6 +35,7 @@
        :desc "i3wm"              "i" (lambda() (interactive)(find-file "~/.config/i3/config"))
        :desc "Vim"               "v" (lambda() (interactive)(find-file "~/.vimrc"))
        :desc "Alacritty"         "a" (lambda() (interactive)(find-file "~/.config/alacritty/alacritty.yml"))
+       :desc "wiki"              "w" (lambda() (interactive)(find-file "~/wiki"))
        :desc "Polybar"           "p" (lambda() (interactive)(find-file "~/.config/polybar/config"))))
 
 

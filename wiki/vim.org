@@ -1,0 +1,62 @@
+#+TITLE:  Vim
+#+DESCRIPTION: A basic docs file for my VIM config
+
+* Plugins
+** UI
+- =iCyMind/NeoSolarized= Solarized theme
+- =itchyny/lightline= Lightline Mod Bar
+- =ryanoasis/vim-devicons= Icons for NerdTree
+- =Chrisbra/Colorizer= Highlight color codes
+** Tools
+- =suan/vim-instant-markdown= Option to preview markdown in browser
+- =preservim/nerdtree= A file side bar
+- =preservim/nerdcommenter= Comment and uncomment lines of code
+- =jiangmiao/auto-pairs= Insert closing pair
+- =tpope/vim-fugitive= Git system for vim
+- =junegunn/fzf= & =junegunn/fzf.vim= Fuzzy searcher for vim
+- =francoiscabrol/ranger.vim= File manager
+- =SirVer/ultisnips= Snippet Manager for vim
+** Programming
+- =vim-scripts/indentpython.vim= Script for better indetation in python
+- =psf/black= Auto format pyton code on save
+- =mattn/emmet-vim= Emmet for vim
+- =dense-analysis/ale= Linter for vim
+- =neoclide/coc.nvim= Autocompletion engine for vim
+- =vim-python/python-syntax= Better python syntax highlighting
+- =heavenshell/vim-pydocstring= Generate python doc strings
+- =pangloss/vim-javascript= Better syntax and indentation for javascript
+- =leafgarland/typescript-vim= Better syntax and indentation for typescript
+- =maxmellon/vim-jsx-pretty= Better syntax and indentation for JSX/React
+- =prettier/vim-prettier= Format files on save
+
+* Keybindings
+** Normal Mode
+- *;* Run :
+- *C-[h,j,k,l]* Move focus
+- *C-e* Move to next "_"
+- *S-h* Move to beginning of line
+- *S-l* Move to end of line
+- *S-k* Move line up
+- *S-j* Move line down
+- *gd* Go to definition
+- *<leader>* SPC
+- *<leader> <leader>* Clear search highlights
+- *<leader> ENTER* Fold or Unfold code
+- *<leader> d* Insert date
+- *<leader> w* Save file
+- *<leader> q* Quit buffer
+- *<leader> qa* Quit all buffers
+- *<leader> wq* Save and quit
+- *<leader> gd* Look at git diff of current file
+- *<leader> a* Use Ag searcher
+- *<leader> f* Toggle NERDTree
+- *<leader> r* Show ranger
+- *<leader> l* Toggle Ale
+- *<leader> ds* Generate PyDocstring
+- *:w!!* Save as root user
+** Insert Mode
+- *,,* Call emmet
+- *jj* Escape to normal mode
+** Visual mode
+- *S-k* Move Block up
+- *S-j* Move Block down

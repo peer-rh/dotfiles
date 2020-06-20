@@ -1,0 +1,34 @@
+#+TITLE: I3wm
+
+* Keybindings
+- *$mod* Windows/Super
+** Navigation
+- *$mod-[h,j,k,l]* Change focus
+- *$mod-S-[h,j,k,l]* Move focused window
+- *$mod-[0-9]* Change workspace
+- *$mod-S-[0-9]* Move focused window to workspace
+- *$mod-m* Move workspace to the monitor left
+** Applications
+- *$mod-RET* Open Terminal(alacritty)
+- *$mod-q* Quit current window
+- *$mod-d* Open rofi application launcher
+** Layout
+- *$mod-v* Toggle split (horizontal/vertical)
+- *$mod-f* Toggle fullscreen
+- *$mod-s* Stack windows
+- *$mod-w* Tab windows
+- *$mod-e* No stacking/tabs
+- *$mod-S-SPC* Toggle floating
+** Resize
+- *$mod-r* Switch to resize mode
+- *h,j,k,l* When in resize mode change size of current window
+- *ESC* or *RET* or *$mod-r* Exit resize mode
+** Media
+- *XF86AudioNext* Next Song
+- *XF86AudioPrev* Previous Song
+- *XF86AudioPlay* Play/pause Song
+
+** Other
+- *$mod-S-c* Reload the config files
+- *$mod-S-r* Restart i3wm
+- *$mod-S-e* Exit i3wm

@@ -6,6 +6,7 @@
 (set-company-backend! '(php-mode
                         python-mode
                         js-mode
+                        org-mode
                         css-mode)
   '(:separate company-files
     company-yasnippet))

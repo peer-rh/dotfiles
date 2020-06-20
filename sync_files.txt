@@ -14,3 +14,4 @@ scripts/
 .Xresources
 .zsh_plugins.txt
 .zshrc
+wiki/

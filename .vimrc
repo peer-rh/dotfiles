@@ -26,7 +26,6 @@ Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'iCyMind/NeoSolarized'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
@@ -40,7 +39,7 @@ Plug 'vim-python/python-syntax'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' 
 Plug 'francoiscabrol/ranger.vim'
-Plug 'chrisbra/Colorizer'
+Plug 'Chrisbra/Colorizer'
 Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
 Plug 'SirVer/ultisnips'
 Plug 'pangloss/vim-javascript'
@@ -168,14 +167,6 @@ map <leader>ds :Pydocstring<CR>
 nmap <silent> <C-_> <Plug>(pydocstring)
 
 nmap <silent> gd <Plug>(coc-definition)
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
 
 let g:ranger_map_keys = 0
 map <leader>r :Ranger<CR>
@@ -205,9 +196,6 @@ au BufWritePost *.scss :silent !sassvim <afile>
 " {{{
 " NERDTree
 let NERDTreeShowHidden=1
-
-" Nord
-let g:nord_cursor_line_number_background = 1
 
 " Black
 autocmd BufWritePre *.py execute ':Black'
