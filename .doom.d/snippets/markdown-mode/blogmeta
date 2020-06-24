@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: Blog meta data
+# key: blogmeta
+# --
+
+---
+title: "$1"
+date: "`(format-time-string "%Y-%m-%d")`"
+template: "post"
+draft: false
+slug: "$2"
+category: "blog"
+tags:
+  - "$3"
+description: "$4"
+socialImage: ""
+---
+$0

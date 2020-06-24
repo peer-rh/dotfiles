@@ -28,7 +28,7 @@
       :desc "Clear highlights"   "ESC" #'evil-ex-nohighlight
       (:prefix "c"
        :desc "Toggle comment"    "t" #'evilnc-comment-or-uncomment-lines)
-      (:prefix-map ("C" . "config files")
+      (:prefix-map ("d" . "config files")
        :desc "Doom"              "d" #'doom/open-private-config
        :desc "Dotfile Readme"    "r" (lambda() (interactive)(find-file "~/.dotfiles/README.org"))
        :desc "Zsh"               "z" (lambda() (interactive)(find-file "~/.zshrc"))

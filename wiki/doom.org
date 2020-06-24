@@ -20,3 +20,7 @@
 - *<Leader> C* A list of the some config files
 - *<Leader> c t* Comment/Uncomment on selected block of code
 - *<Leader> <esc>* Clear search highlights
+
+* TODO
+** TODO Add bullet for org mode
+- Habbit tracker

@@ -28,6 +28,10 @@ dots_sync() {
     done < ~/.dotfiles/sync_files.txt
 }
 
+dots_status() {
+   git -C ~/.dotfiles status
+}
+
 dots_gitadd() {
    git -C ~/.dotfiles add -A 
 }

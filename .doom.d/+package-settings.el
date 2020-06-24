@@ -16,4 +16,3 @@
 
 ;; org mode
 (setq org-directory "~/Documents/org-notes")
-(setq org-noter-notes-search-path '("~/Documents/org-notes/"))
